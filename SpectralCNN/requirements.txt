@@ -1,0 +1,21 @@
+# python==3.12.*
+numpy==1.26.*
+h5py==3.13.*
+tqdm==4.66.*
+pythonnet==3.0.*
+xraylib==4.1.*
+scikit-learn==1.5.*
+hyperspy==2.3.*
+pytorch-lightning==2.5.*
+ijson==3.3.*
+mlflow==2.21.*
+torch==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+torchvision==0.21.*
+torchaudio==2.6.0+cu118
+torchmetrics==1.16.3
+pandas==2.2.*
+matplotlib==3.9.*
+pymatgen==2025.3.*
+scipy==1.15.*
+ipykernel==6.28.*
+ipython==8.27.*

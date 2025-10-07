@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #0056b3;
+}
+
+.controls {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.image-section {
+    display: flex; 
+    gap: 20px; 
+}
+
+#segmentationImage {
+    border: 1px solid #ddd;
+    height: auto;
+    display: block;
+    flex-grow: 2; 
+    flex-shrink: 1;
+    flex-basis: 500px; 
+    object-fit: contain;
+    
+    image-rendering: pixelated;
+}
+
+#pixelInfo {
+    flex-grow: 1; /* Allow pixel info to take remaining space */
+    flex-shrink: 1;
+    flex-basis: 300px; /* Give it a preferred minimum width (e.g., 300px) */
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    overflow-y: auto; /* In case many predictions */
+    max-height: 800px; /* Adjust based on your screen size */
+    display: flex; /* Make pixelInfo a flex container too for its internal elements */
+    flex-direction: column; /* Stack contents vertically */
+}
+
+#predictionsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#predictionsList li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+#spectrumPlot {
+    /* Adjust width to make it smaller within #pixelInfo */
+    width: 100%; /* It should fill the available width of #pixelInfo */
+    height: 250px; /* Make the plot height smaller to save vertical space */
+    margin-top: 15px;
+    /* NEW: Add some margin-bottom if needed for separation from predictions list */
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments for smaller screens (optional, but good practice) */
+@media (max-width: 900px) {
+    .image-section {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+    #segmentationImage, #pixelInfo {
+        flex-basis: auto; /* Reset flex-basis when stacked */
+        max-width: 100%; /* Allow them to take full width */
+    }
+}

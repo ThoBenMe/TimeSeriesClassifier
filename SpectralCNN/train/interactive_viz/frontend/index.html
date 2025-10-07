@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XRF Map Viewer</title>
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>XRF Map Viewer</h1>
+
+        <div class="controls">
+            <label for="imageSelect">Select Map:</label>
+            <select id="imageSelect">
+                <option value="predicted_seg_map_top1">Predicted (Top 1)</option>
+                <option value="predicted_seg_map_top2">Predicted (Top 2)</option>
+                <option value="predicted_seg_map_top3">Predicted (Top 3)</option>
+                <option value="ground_truth_map">Ground Truth</option>
+                <option value="original">Original Image</option>
+                <option value="uncertainty_map">Uncertainty Map</option>
+            </select>
+        </div>
+
+        <div class="image-section">
+            <img id="segmentationImage" src="/image/predicted_seg_map_top1.png" alt="Segmentation Map" style="cursor: crosshair;">
+            <div id="pixelInfo">
+                <h2>Pixel (x, y)</h2>
+                <div id="pixelCoords">Hover over image...</div>
+                <h3>Top K Predictions:</h3>
+                <ul id="predictionsList"></ul>
+                <div id="spectrumPlot"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
