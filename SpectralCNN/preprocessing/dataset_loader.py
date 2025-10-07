@@ -25,7 +25,6 @@ from pytorch_lightning.trainer.states import TrainerFn
 
 sys.setrecursionlimit(10000)
 
-from bnatools.tools import SpectrumHandler
 from thesis.preprocessing.transforms import (
     Concat2TensorSoftRealData,
     # Concat2TensorSoft,

@@ -5,14 +5,6 @@ model architectures, training scripts, and utilities.
 Version: 0.1.0
 """
 
-# external bnatools imports
-try:
-    from bnatools.tools import Compound, PySpectrumFactory as PSF, SpectrumHandler
-except ImportError:
-    Compound = None
-    PSF = None
-    SpectrumHandler = None
-
 # configs
 from .configs.config_reader import load_config
 
