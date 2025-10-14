@@ -34,4 +34,4 @@ python train_model.py --model <modelname> --mix --epochs 100
 ```
 
 
-
+Developed for research on spectral learning and model transferability.
